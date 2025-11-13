@@ -1,0 +1,31 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=SkillTrackingDb;Username=postgres;Password=your_password_here"
+  },
+  "Jwt": {
+    "Key": "YourSuperSecretKeyThatIsAtLeast32CharactersLongForDevelopment!",
+    "Issuer": "SkillTrackingApp",
+    "Audience": "SkillTrackingAppUsers",
+    "ExpirationInMinutes": 1440
+  },
+  "Email": {
+    "SmtpServer": "smtp.gmail.com",
+    "SmtpPort": 587,
+    "SenderEmail": "your-email@gmail.com",
+    "SenderPassword": "your-app-password-here",
+    "SenderName": "Skill Tracking App",
+    "EnableSsl": true
+  },
+  "Notification": {
+    "WeeklyReminderDay": "Monday",
+    "ReminderTime": "09:00"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning",
+      "Microsoft.EntityFrameworkCore": "Information"
+    }
+  },
+  "AllowedHosts": "*"
+}
