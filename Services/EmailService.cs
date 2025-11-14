@@ -8,6 +8,7 @@ public interface IEmailService
 {
     Task<bool> SendSkillSummaryEmailAsync(string toEmail, string userName, SkillSummaryDto summary);
     Task<bool> SendReminderEmailAsync(string toEmail, string userName, DateTime lastUpdateDate);
+    Task<bool> SendEmailAsync(string toEmail, string subject, string body);
 }
 
 public class EmailService : IEmailService
@@ -146,7 +147,7 @@ public class EmailService : IEmailService
         return await SendEmailAsync(toEmail, subject, body);
     }
 
-    private async Task<bool> SendEmailAsync(string toEmail, string subject, string body)
+    public async Task<bool> SendEmailAsync(string toEmail, string subject, string body)
     {
         try
         {
